@@ -17,20 +17,21 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="container">
       <Image
-      src="https://i.postimg.cc/4NKRHgGg/logo-with-tagline.png"
+      src="https://i.postimg.cc/w3KkfJGg/logo-with-tagline-removebg-preview.png"
       alt="Company Logo"
-      width={60}  // Set your desired width
-      height={60}  // Set your desired height
+      width={150}  // Set your desired width
+      height={150}  // Set your desired height
       className="logoImage"
+      unoptimized
     />
         <Link href="/" className="logo">
-          <span className="logoText">YourLogo</span>
+          <span className="logoText">SIMPLY SPANISH</span>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="navLinks">
-          <Link href="/about" className="navLink">About</Link>
-          <Link href="/contact" className="navLink">Contact</Link>
+          <Link href="/about" className="navLink">ABOUT</Link>
+          <Link href="/contact" className="navLink">CONTACT</Link>
         </div>
 
         {/* Mobile Menu Button */}
