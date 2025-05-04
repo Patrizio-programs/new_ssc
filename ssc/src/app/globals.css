@@ -1,45 +1,10 @@
-:root {
-  --background: #FFFCF7;
-  --foreground: black;
+
+main {
+  background-color: #FFFCF7;
+  
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #FFFCF7;
-    --foreground: black;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-
-blackText{
-  color: black
+.playfair{ 
+  font-family: 'Playfair Display', serif;
 }

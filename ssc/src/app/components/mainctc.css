@@ -1,0 +1,59 @@
+.hero {
+    color: white;
+    /* Background image with fallback */
+    background-image: url('https://i.postimg.cc/T2mZjc6P/La-Altergracia-Devoosh-3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    /* Responsive sizing (full-width, adjustable height) */
+    width: 100vw;
+    height: 80vh; /* Adjust to 50vh, 100vh, etc. as needed */
+     /* Prevents excessive stretching on large screens */
+  
+    /* Fallback background color (if image fails to load) */
+    position: relative;
+    max-height: 800px;
+
+}
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+ 
+  .hero .playfair{
+    font-size: 70px;
+  }
+
+  .hero-content {
+    padding-top: 20px;
+    padding-left: 25px;
+  }
+
+  .hero .btn{
+    color: white;
+    background-color: #8f602c;
+    width: 215px;
+    max-width: 400px;
+    height: 50px;
+    font-family: 'Lato', sans-serif;
+
+  }
+
+  .hero p{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    max-width: 400px;
+  }
+
+  .hero h1{
+    max-width: 400px;
+  }
