@@ -8,25 +8,25 @@ export default function Details() {
 
       <div className="container text-center">
         <div className="row align-items-center">
-          <div className="col">
+          <div className="col p-3">
             <img
-              className="service_img"
+              className="service_img mb-3"
               src="https://i.postimg.cc/bNSCcmxt/1-removebg-preview.png"
             ></img>
             <h5 className="playfair">CXC Spanish and French Classes</h5>
           </div>
 
-          <div className="col">
+          <div className="col p-3">
             <img
-              className="service_img"
+              className="service_img mb-3 "
               src="https://i.postimg.cc/2yM0LWDy/2-removebg-preview.png"
             ></img>
             <h5 className="playfair">CXC Spanish and French Classes</h5>
           </div>
 
-          <div className="col">
+          <div className="col p-3">
             <img
-              className="service_img"
+              className="service_img mb-3"
               src="https://i.postimg.cc/tRMSMKxb/3-removebg-preview.png"
             ></img>
             <h5 className="playfair">CXC Spanish and French Classes</h5>
