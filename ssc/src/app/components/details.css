@@ -1,15 +1,98 @@
 .services{
     padding-left: 25px;
     font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
+/* Card layout */
+.cards-row{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.col{
+    /* make columns behave as responsive cards container */
+    flex: 0 1 320px;
+    max-width: 340px;
+    box-sizing: border-box;
+}
+
+.service-card{
+    background: #ffffff;
+    color: #111;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(10,10,10,0.08);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+    text-align: center;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.service-card:focus{
+    outline: 3px solid rgba(143,96,44,0.18);
+    outline-offset: 4px;
+}
+
+.service-card:hover,
+.service-card:focus{
+    transform: translateY(-6px);
+    box-shadow: 0 14px 36px rgba(10,10,10,0.12);
+}
+
+.service_img{
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin: 0 auto 12px;
+}
+
+.service-title{
+    font-size: 18px;
+    margin: 8px 0 6px;
+}
+
+.service-desc{
+    font-size: 14px;
+    color: #444;
+    margin-top: 6px;
+}
+
+/* Tweak heading sizes inside services */
 .services h5{
     font-size: 35px;
 }
 
-.service_img{
-    max-width: 150px;
-    height: auto;
+/* Responsive adjustments */
+@media (max-width: 900px){
+    .services{
+        font-size: 42px;
+    }
+    .col{
+        flex: 0 1 45%;
+        max-width: 46%;
+    }
+}
 
+@media (max-width: 600px){
+    .services{
+        font-size: 34px;
+        padding-left: 12px;
+    }
+    .col{
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+    .service-card{
+        min-height: 180px;
+        padding: 16px;
+    }
 }
 

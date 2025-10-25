@@ -1,14 +1,17 @@
+import Image from "next/image";
 import "./navbar.css";
 
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-nav" id="nav">
       <div className="container-fluid">
-        <img
+        <Image
           src="https://i.postimg.cc/0NzsMw1f/logoupscale-removebg-preview.png"
-          width="72px"
-          height="72px"
-        ></img>
+          alt="Simply Spanish Centre logo"
+          width={72}
+          height={72}
+          className="navbar-logo"
+        />
         <a className="navbar-brand" id="nav-link" href="#">
           Simply Spanish Centre
         </a>

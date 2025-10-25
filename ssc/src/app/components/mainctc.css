@@ -1,22 +1,14 @@
 .hero {
     color: white;
-    /* Background image with fallback */
-    background-image: url('https://i.postimg.cc/JnfvwjBm/sama.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  
-    /* Responsive sizing (full-width, adjustable height) */
-    width: 100vw;
-    height: 80vh; /* Adjust to 50vh, 100vh, etc. as needed */
-     /* Prevents excessive stretching on large screens */
-  
-    /* Fallback background color (if image fails to load) */
+    /* Image moved to next/image for LCP and optimization */
+    width: 100%;
+    height: 80vh;
+    /* Prevents excessive stretching on large screens */
     position: relative;
     max-height: 800px;
-
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
-
 
 .hero::after {
     content: "";
@@ -25,35 +17,96 @@
     left: 0;
     width: 100%;
     height: 100%;
-    
-  }
+    /* Ensure overlay doesn't block interactions */
+    pointer-events: none;
+    z-index: 0;
+}
 
- 
-  .hero .playfair{
-    font-size: 70px;
-  }
+/* next/image fills the parent; make sure it covers and sits behind content */
+.hero-bg {
+    position: absolute !important; /* next/image injects its own wrapper */
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    z-index: 0;
+}
 
-  .hero-content {
-    padding-top: 20px;
-    padding-left: 25px;
-  }
+.hero .playfair {
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
 
-  .hero .btn{
+.hero-content {
+    padding: 20px 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    /* Put content above the ::after overlay so buttons are clickable */
+    position: relative;
+    z-index: 2;
+}
+
+.hero .btn {
     color: white;
     background-color: #8f602c;
-    width: 215px;
-    max-width: 400px;
+    width: 100%;
+    max-width: 215px;
     height: 50px;
     font-family: 'Lato', sans-serif;
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-  }
-
-  .hero p{
+.hero p {
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
     max-width: 400px;
-  }
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
 
-  .hero h1{
+.hero h1 {
     max-width: 400px;
-  }
+    margin-bottom: 15px;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 100vh;
+    }
+
+    .hero-content {
+        padding: 15px;
+    }
+
+    .hero .btn {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero p,
+    .hero h1 {
+        max-width: 100%;
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    .hero-content {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .hero .btn {
+        margin: 0 auto;
+        display: block;
+    }
+}
