@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import "./navbar.css";
 
 export default function Navbar() {
@@ -12,9 +14,9 @@ export default function Navbar() {
           height={72}
           className="navbar-logo"
         />
-        <a className="navbar-brand" id="nav-link" href="#">
+        <Link className="navbar-brand" id="nav-link" href="/">
           Simply Spanish Centre
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -29,24 +31,25 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a
-                className="nav-link "
-                id="nav-link"
-                aria-current="page"
-                href="#"
-              >
+              <Link className="nav-link" id="nav-link" href="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" id="nav-link" href="#">
+              <Link className="nav-link" id="nav-link" href="/About">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" id="nav-link" href="#">
+              <Link className="nav-link" id="nav-link" href="/pricing">
                 Pricing
-              </a>
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" id="nav-link" href="/Resource">
+                Resources
+              </Link>
             </li>
           </ul>
         </div>
