@@ -1,8 +1,13 @@
-# Netlify redirects for Next.js
-# Handle Next.js static files
-/_next/static/*  /_next/static/:splat  200
-/_next/data/*  /_next/data/:splat  200
-/_next/image/*  /_next/image/:splat  200
+# Netlify redirects for Next.js Application
+# Ensure Next.js static assets and API routes work
+/_next/*            /_next/:splat            200
+/static/*           /static/:splat           200
+/api/*              /api/:splat              200
 
-# Handle all other routes - SPA client-side routing
-/*  /index.html  200
+# Handle main application routes
+/                   /index.html              200
+/About              /index.html              200
+/Resource           /index.html              200
+
+# Catch all for other routes - ensures client-side routing works
+/*                  /index.html              200
