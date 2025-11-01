@@ -1,2 +1,8 @@
-/_next/static/* /_next/static/:splat 200
-/* /index.html 200
+# Netlify redirects for Next.js
+# Handle Next.js static files
+/_next/static/*  /_next/static/:splat  200
+/_next/data/*  /_next/data/:splat  200
+/_next/image/*  /_next/image/:splat  200
+
+# Handle all other routes - SPA client-side routing
+/*  /index.html  200
