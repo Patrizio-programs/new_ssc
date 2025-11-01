@@ -3,59 +3,32 @@ import React from "react";
 const topics = [
   {
     id: "gramatica",
-    title: "Gramática básica",
-    desc: "Reglas esenciales para construir oraciones correctamente.",
-    lesson: "https://example.com/recursos/gramatica/leccion",
-    practice: "https://example.com/recursos/gramatica/ejercicios",
+    title: "Spanish Nouns",
+    desc: "Important rules for Spanish nouns and their usage.",
+    lesson: "https://wayground.com/embed/presentation/6570c08ec46faa5551a7a2f6",
+    practice: "https://wayground.com/admin/quiz/6573d7ae50154d53f388090d",
   },
   {
     id: "vocabulario",
-    title: "Vocabulario cotidiano",
-    desc: "Palabras y frases comunes para la vida diaria.",
-    lesson: "https://example.com/recursos/vocabulario/leccion",
-    practice: "https://example.com/recursos/vocabulario/ejercicios",
+    title: "Present Tense Verbs ",
+    desc: "The present tense basics.",
+    lesson: "https://wayground.com/embed/presentation/6574e0a9caf370c505f49096",
+    practice: "https://wayground.com/embed/quiz/658626b76d778b08a63fff1f",
   },
   {
     id: "conjugacion",
-    title: "Conjugación de verbos",
-    desc: "Tablas y reglas para los tiempos más usados.",
-    lesson: "https://example.com/recursos/conjugacion/leccion",
-    practice: "https://example.com/recursos/conjugacion/ejercicios",
+    title: "Preterite Tense Verbs",
+    desc: "Simple past tense.",
+    lesson: "https://wayground.com/embed/presentation/65b7d008896465a654a93a9f",
+    practice: "https://wayground.com/embed/quiz/65d14a3c9c273fc8ccc6ec15",
   },
-  {
-    id: "pronunciacion",
-    title: "Pronunciación",
-    desc: "Consejos y ejercicios para mejorar la pronunciación.",
-    lesson: "https://example.com/recursos/pronunciacion/leccion",
-    practice: "https://example.com/recursos/pronunciacion/ejercicios",
-  },
+
   {
     id: "idiomaticas",
-    title: "Expresiones idiomáticas",
-    desc: "Modismos y expresiones útiles en contextos reales.",
-    lesson: "https://example.com/recursos/idiomaticas/leccion",
-    practice: "https://example.com/recursos/idiomaticas/ejercicios",
-  },
-  {
-    id: "comprension",
-    title: "Comprensión auditiva",
-    desc: "Audios y ejercicios para entender hablantes nativos.",
-    lesson: "https://example.com/recursos/comprension/leccion",
-    practice: "https://example.com/recursos/comprension/ejercicios",
-  },
-  {
-    id: "lectura",
-    title: "Lectura y escritura",
-    desc: "Textos, actividades y correcciones para mejorar.",
-    lesson: "https://example.com/recursos/lectura/leccion",
-    practice: "https://example.com/recursos/lectura/ejercicios",
-  },
-  {
-    id: "ninos",
-    title: "Recursos para niños",
-    desc: "Juegos, canciones y materiales didácticos infantiles.",
-    lesson: "https://example.com/recursos/ninos/leccion",
-    practice: "https://example.com/recursos/ninos/ejercicios",
+    title: "Conditional Tense Verbs",
+    desc: "Conjugating and learning Conditional Tense.",
+    lesson: "https://wayground.com/embed/presentation/65da3dc76aa94593a2fd3f94",
+    practice: "https://wayground.com/embed/quiz/69054d09fd9d4303f7e21368",
   },
 ];
 
@@ -63,9 +36,9 @@ export default function Resource() {
   return (
     <div className="resource-page">
       <header className="resource-header">
-        <h1>Recursos de Español</h1>
+        <h1>Spanish Learning Resources</h1>
         <p className="subtitle">
-          Selecciona un tema para acceder a lecciones y ejercicios
+          Select a topic to access some free lessons and quizzes.
         </p>
       </header>
 
@@ -88,7 +61,7 @@ export default function Resource() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Ver lección
+                  View lesson
                 </a>
                 <a
                   className="link"
@@ -96,14 +69,68 @@ export default function Resource() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Ejercicios →
+                  Quiz →
                 </a>
               </div>
             </article>
           ))}
         </div>
       </main>
+      <br></br>
 
+      <h4 className="resource-header">Spanish Vocabulary</h4>
+
+      <ul className="vocab-list">
+        <li>
+          <a
+            target="blank"
+            href="https://knowt.com/flashcards/7ef0f618-d26e-40bf-897f-3d934a3413da"
+          >
+            Essential Beginner Spanish Verbs
+          </a>
+        </li>
+        <li>
+          <a
+            target="blank"
+            href="https://knowt.com/flashcards/e5b429b4-2f48-4992-84e6-ce1460a74c10"
+          >
+            Members of the Family in Spanish
+          </a>
+        </li>
+
+        <li>
+          <a
+            target="blank"
+            href="https://knowt.com/flashcards/6f9db427-52c5-44b2-a357-46b269a47da8"
+          >
+            Common Adverbs in Spanish
+          </a>
+        </li>
+
+        <li>
+          <a
+            target="blank"
+            href="https://knowt.com/flashcards/9ab4a7f5-9d70-44e2-a04a-25eb733d0bb1"
+          >
+            Common Spanish Nouns for Beginners
+          </a>
+        </li>
+      </ul>
+
+      <h4 className="resource-header">Additional Resources</h4>
+
+      <div>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/DUiEn8x1SEY?si=yfNN39I22st_gVJ-"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
       <style>{`
                 .resource-page {
                     font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -168,7 +195,7 @@ export default function Resource() {
                     gap: 10px;
                 }
                 .btn {
-                    background: #0ea5a4;
+                    background: #083045;
                     color: white;
                     padding: 8px 12px;
                     border-radius: 8px;
@@ -184,6 +211,17 @@ export default function Resource() {
                     opacity: 0.85;
                 }
                 .link:hover { text-decoration: underline; opacity: 1; }
+                .vocab-list {
+                    list-style: none;
+                    padding: 0;
+                    margin: 20px 0;
+                }
+                .vocab-list li {
+                    margin-bottom: 15px;
+                    padding: 10px;
+                    background-color: #f8fafc;
+                    border-radius: 6px;
+                }
             `}</style>
     </div>
   );
