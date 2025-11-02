@@ -28,6 +28,10 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
 
         <Footer></Footer>
+        <Script 
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
