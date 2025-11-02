@@ -1,15 +1,12 @@
+// next.config.mjs
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // CRUCIAL: Enables static HTML export, generating files into the 'out' directory
-  output: 'export', 
+  output: 'export', // <--- This is the key change
   
   images: {
-    // Highly Recommended: Disables built-in image optimization for static export
     unoptimized: true,
     domains: ["i.postimg.cc"],
   },
-  
-  // Recommended: Ensures consistent routing for static hosts
   trailingSlash: true,
 };
 
