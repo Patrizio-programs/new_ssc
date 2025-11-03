@@ -117,20 +117,6 @@ export default function Resource() {
         </li>
       </ul>
 
-      <h4 className="resource-header">Additional Resources</h4>
-
-      <div>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/DUiEn8x1SEY?si=yfNN39I22st_gVJ-"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
-      </div>
       <style>{`
                 .resource-page {
                     font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
